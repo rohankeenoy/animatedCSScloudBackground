@@ -73,10 +73,34 @@ body{
     animation:levitate 17s linear infinite;
 }
 .cloud5{
-    margin-left:-250px;
+    margin-left:-150px;
     z-index: 100;
     overflow: visible;
     animation:levitate2 20s linear infinite;
+}
+.cloud6{
+    animation: moveSlight 25s linear infinte;
+
+}
+
+
+@keyframes moveSlight{
+    0%{
+        transform: translateY(0px)
+    }
+    25%{
+        transform: translateY(200px)
+    }
+    50%{
+        transform: translateY(-120px)
+    }
+    75%{
+        transform: translateY(50px)
+    }
+    100%{
+        transform: translateY(0px)
+    }
+
 }
 
 @-moz-keyframes tilt {

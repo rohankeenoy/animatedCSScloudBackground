@@ -48,6 +48,11 @@ const Main = () => {
                     </div>
                 </Col>
                 <Col>
+                    <div className = "cloud">
+                        <img className = "cloud6" src ={cloud6} alt="cloud6"/>
+                    </div>
+                </Col>
+                <Col>
                     <div className="cloud">
                         <img className="cloud5" src={cloud5} alt="cloud5" />
                     </div>
