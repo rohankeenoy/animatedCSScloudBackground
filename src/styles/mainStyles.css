@@ -1,6 +1,7 @@
 /* Full width container */
 body{
-    background-color:#f79256 !important;
+    background: #38a3a5;
+    background: radial-gradient(circle, #38a3a5 0%, #c7f9cc 100%);
 }
 
 .container-fluid {
@@ -79,26 +80,30 @@ body{
     animation:levitate2 20s linear infinite;
 }
 .cloud6{
-    animation: moveSlight 25s linear infinte;
+    animation: moveSlight 25s linear  infinite;
 
 }
 
 
 @keyframes moveSlight{
     0%{
-        transform: translateY(0px)
+        transform: translateY(0px);
+        transform: rotate(10deg);
     }
     25%{
-        transform: translateY(200px)
+        transform: translateY(-120px);
     }
     50%{
-        transform: translateY(-120px)
+        transform: translateY(0px);
+        transform: rotate(15deg);
     }
     75%{
-        transform: translateY(50px)
+        transform: translateY(-50px);
+        transform: rotate(0deg);
     }
     100%{
-        transform: translateY(0px)
+        transform: translateY(0px);
+        transform: rotate(10deg);
     }
 
 }
@@ -304,5 +309,29 @@ body{
             -webkit-transform: rotate(0deg);
             transform:translateY(0px);
         }
-}}
+}
+@keyframes moveSlight{
+    0%{
+        transform: translateY(0px);
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0px);
+        transform: rotate(15deg);
+    }
+    75%{
+        transform: translateY(-20px);
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: rotate(10deg);
+    }
+
+}
+
+}
 
