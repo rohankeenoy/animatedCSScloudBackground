@@ -1,0 +1,284 @@
+/* Full width container */
+body{
+    background-color:#f79256 !important;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.row {
+    padding-right: 0;
+    
+    margin-right: 0;
+    
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.col {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 1px solid rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+    border: 1px solid rgb(10, 85, 155);
+    height: 400px;
+    width: 100%; /* Ensure it stretches the column width */
+    object-fit: cover;
+    overflow:visible;
+}
+.cloud1{
+   overflow:visible;
+    margin-left: 100px;
+    -webkit-animation:tilt 20s linear infinite;
+    -moz-animation:tilt 20s linear infinite;
+    animation:tilt 20s linear infinite;
+    z-index: -11;
+}
+.cloud2{
+    
+    margin-left:-200px;
+    overflow: visible;
+    -webkit-animation:tilt 17s linear infinite;
+    -moz-animation:tilt 17s linear infinite;
+    animation:tilt 17s linear infinite;
+    animation-direction: reverse;
+}
+.cloud3{
+    -webkit-animation:levitate 17s linear infinite;
+    -moz-animation:levitate 17s linear infinite;
+    animation:levitate1 10s linear infinite;
+    animation-direction: reverse;
+}
+
+.cloud4{
+    margin-top:-250px;
+    margin-left:100px;
+    overflow:visible;
+    z-index: 100;
+    -webkit-animation:levitate 17s linear infinite;
+    -moz-animation:levitate 17s linear infinite;
+    animation:levitate 17s linear infinite;
+}
+.cloud5{
+    margin-left:-250px;
+    z-index: 100;
+    overflow: visible;
+    animation:levitate2 20s linear infinite;
+}
+
+@-moz-keyframes tilt {
+    0% { -moz-transform: rotate(0deg); }
+    50% { -moz-transform: rotate(5deg); }
+    100% { -moz-transform: rotate(-5deg); }
+}
+
+@-webkit-keyframes tilt {
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(5deg); }
+    100% { -webkit-transform: rotate(-5deg); }
+}
+
+@keyframes tilt {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    75% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes levitate {
+    0% { -moz-transform: rotate(0deg); }
+    50% { -moz-transform: rotate(5deg); }
+    100% { -moz-transform: rotate(-5deg); }
+}
+
+@-webkit-keyframes levitate{
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(5deg); }
+    100% { -webkit-transform: rotate(-5deg); }
+}
+
+@keyframes levitate{
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: translateY(0);
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+        transform: translateY(100px);
+    }
+    75% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(10deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+@keyframes levitate1{
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: translateY(0);
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+        transform: translateY(50px);
+    }
+    75% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(-10deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+@keyframes levitate2{
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: translateY(0);
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+        transform: translateY(-50px);
+    }
+    75% {
+        -webkit-transform: rotate(2deg);
+        transform: translateY(50px);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+        transform:translateY(0px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Ensure html and body take up the full screen height */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Full-width container that takes up the entire height */
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        height: 100vh; /* Viewport height */
+    }
+
+    /* Row should also take the full height */
+    .row {
+        padding-right: 0;
+        margin-right: 0;
+        height: 25%; /* Take full height */
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+
+    /* Column should take the full height and be centered */
+    .col {
+        height: 100%; /* Full height */
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+        border: 1px solid rgb(255, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Cloud styles */
+    .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+        border: 1px solid rgb(10, 85, 155);
+        height: 200px;
+        width: 100%; /* Ensure it stretches the column width */
+        object-fit: cover;
+        overflow: visible;
+    }
+
+    .cloud1 {
+        overflow: visible;
+        margin-left: 0;
+        -webkit-animation: tilt 20s linear infinite;
+        -moz-animation: tilt 20s linear infinite;
+        animation: tilt 20s linear infinite;
+        z-index: -11;
+    }
+
+    .cloud2 {
+        margin-left: 0;
+        overflow: visible;
+        -webkit-animation: tilt 17s linear infinite;
+        -moz-animation: tilt 17s linear infinite;
+        animation: tilt 17s linear infinite;
+        animation-direction: reverse;
+    }
+
+    .cloud3 {
+        animation:levitate2 25s linear infinite;
+    }
+
+    .cloud4 {
+        margin-top: 0;
+        margin-left: 0;
+        overflow: visible;
+        z-index: 100;
+        -webkit-animation: tilt 25s linear infinite;
+        -moz-animation: tilt 25s linear infinite;
+        animation: tilt 25s linear infinite;
+    }
+
+    .cloud5 {
+        margin-left: 0;
+        z-index: 100;
+        overflow: visible;
+        animation: levitate2 20s linear infinite;
+    }
+    @keyframes levitate2{
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: translateY(0);
+        }
+        25% {
+            -webkit-transform: rotate(5deg);
+            transform: translateY(-15px);
+        }
+        75% {
+            -webkit-transform: rotate(2deg);
+            transform: translateY(25px);
+        }
+        100%{
+            -webkit-transform: rotate(0deg);
+            transform:translateY(0px);
+        }
+}}
+
